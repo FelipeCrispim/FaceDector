@@ -60,10 +60,13 @@ for i, face_rect in enumerate(detected_faces):
         vec[b][0] = pose_landmarks.part(b).x
         vec[b][1] = pose_landmarks.part(b).y
 
-    print(vec[33])  
+    print((vec[37][0]+vec[40][0])/2)  
     
     # Draw the face landmarks on the screen.
     win.add_overlay(pose_landmarks)
+    
+    cv2.imread("/home/felipecrispim/keras-workspace/KinFaceW-I/images/father-dau/fd_003_1.jpg")
+    
     
     #cv2.imwrite("aligned_face_{}.jpg".format(i), alignedFace)
     # Use openface to calculate and perform the face alignment
